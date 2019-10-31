@@ -1,0 +1,9 @@
+.card-img-top {
+    width: 70%;
+    margin: auto 0;
+   
+}
+
+.card {
+    max-height: 400px;
+}
