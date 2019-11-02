@@ -15,10 +15,12 @@ class Dancer {
     }
 
     makeCard() {
-      let newClass = this.name
+     
       
-template.clone().appendTo(pickerLine).removeAttr('id').attr("class", "card col-3 " + newClass)
-cardTitle.text(newClass);
+template.clone().appendTo(pickerLine).attr("id", this.name);
+$("#"+ this.name + " h4:nth-child(2)").text(this.name);
+
+
    
            
  }
