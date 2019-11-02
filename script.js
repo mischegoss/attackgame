@@ -1,6 +1,7 @@
 const pickerLine = $(".pickerLine");
 const template = $("#template");
 const cardTitle = $(".card-title");
+const card = $('.card');
 
 
 
@@ -15,15 +16,17 @@ class Dancer {
 
     makeCard() {
       let newClass = this.name
-      let newCard = $("." + newClass)
-template.clone().appendTo(pickerLine).addClass(newClass).removeAttr('id')
+      
+template.clone().appendTo(pickerLine).removeAttr('id').attr("class", "card col-3 " + newClass)
 cardTitle.text(newClass);
-
-
-
-
+   
            
-    }
+ }
+
+ picked() {
+     let newCard= $("."+ this.name)
+    newCard.css('border', '10px solid black');
+ }
 }
 let r = new Dancer("carla", 4, "#", "#");
 r.makeCard()
@@ -33,4 +36,5 @@ k.makeCard()
 
 let s= new Dancer("stan", 4, "#", "#");
 s.makeCard()
+s.picked()
 
