@@ -85,17 +85,19 @@ $("#" + this.name + "-score " + "span").attr("id", this.name + "-points").text(t
     $("#"+ this.name).addClass("not-picked").fadeOut(3000);
  }
 }
+
+let choices = ["bart", "stan", "snoopy", "daffy", "scooby",  "stewie", "shrek", "teletubbies", "gorilla", "dog", "nun"," squirrel", "barney", "santa", "monkey"]
 let carla = new Dancer("carla", 4, "./images/wembley.jpg", "#");
 //carla.makeCard()
 
 
 
-let ralph = new Dancer("smurf", 4, "#", "#");
+let ralph = new Dancer("monkey", 4, "#", "#");
 ralph.makeCard()
 ralph.notPicked()
 ralph.getImage()
 
-let stan= new Dancer("stan", 12, "#", "#");
+let stan= new Dancer("santa", 12, "#", "#");
 stan.makeCard()
 stan.picked()
 stan.getImage()
